@@ -1,0 +1,48 @@
+-- Roblox user: Zrvll_1 follow please ;))
+local validPlaceIds = {
+    4483381587,
+    16993432698
+}
+
+-- Get the current Place ID
+local currentPlaceId = game.PlaceId
+
+-- Function to check if the current Place ID is valid
+local function isValidPlaceId()
+    for _, placeId in ipairs(validPlaceIds) do
+        if currentPlaceId == placeId then
+            return true
+        end
+    end
+    return false
+end
+
+-- If the current Place ID is not valid, display a notification
+if not isValidPlaceId() then
+    -- Create a ScreenGui for the notification
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    -- Create a TextLabel for the notification
+    local notification = Instance.new("TextLabel")
+    notification.Parent = screenGui
+    notification.Size = UDim2.new(0.3, 0, 0.1, 0) -- Adjust size as needed
+    notification.Position = UDim2.new(0.35, 0, 0.45, 0) -- Center on the screen
+    notification.Text = "Xora | Unsupported Game!"
+    notification.TextScaled = true
+    notification.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Red background
+    notification.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
+    notification.BorderSizePixel = 0
+
+    -- Optional: Make the notification fade away after a few seconds
+    wait(3)
+    notification:Destroy()  -- Remove the notification after 3 seconds
+end
+
+if game.PlaceId == 4483381587 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sytcal/Xora/refs/heads/main/ALiteralBaseplate"))()
+end
+
+if game.PlaceId == 16993432698 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sytcal/Xora/refs/heads/main/SquidGameBridge"))()
+end
