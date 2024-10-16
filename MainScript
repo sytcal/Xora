@@ -1,7 +1,7 @@
--- Roblox user: Zrvll_1 follow please ;))
 local validPlaceIds = {
     4483381587,
-    16993432698
+    16993432698,
+    18235609554
 }
 
 -- Get the current Place ID
@@ -45,4 +45,8 @@ end
 
 if game.PlaceId == 16993432698 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/sytcal/Xora/refs/heads/main/SquidGameBridge"))()
+end
+
+if game.PlaceId == 18235609554 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sytcal/Xora/refs/heads/main/TallestHighdiveEverObby"))()
 end
